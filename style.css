@@ -1,0 +1,217 @@
+/* General Styles for Body */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5dc; /* Pale Beige */
+    color: #708090; /* Slate Gray */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background-color: #e0f2f1; /* Soft Mint */
+    color: #ff6f61; /* Light Coral */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ff6f61; /* Light Coral */
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* Homepage Dish Gallery Styles */
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dish {
+    margin: 15px;
+    border: 2px solid #e0f2f1; /* Soft Mint */
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* Ivory White */
+}
+
+.dish img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Ensures the image covers the entire box without distortion */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.dish h2 {
+    background-color: #ff6f61; /* Light Coral */
+    color: #ffffff; /* Ivory White */
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Hover Effects */
+.dish:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dish img:hover {
+    opacity: 0.8;
+}
+
+/* Recipe Page Styles */
+.recipe-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recipe-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-image img {
+    width: 100%;
+    max-width: 300px;  /* Responsive max width */
+    height: auto;      /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e0f2f1; /* Soft Mint */
+    transition: transform 0.3s ease;
+}
+
+.recipe-image img:hover {
+    transform: scale(1.05);
+}
+
+.recipe-details {
+    text-align: left;
+}
+
+.recipe-details h2 {
+    color: #e0f2f1; /* Soft Mint */
+    font-family: 'Georgia', serif;
+    border-bottom: 2px solid #ff6f61; /* Light Coral */
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 2em;  /* Larger text size */
+}
+
+.recipe-details ul, .recipe-details ol {
+    margin: 20px 0;
+    padding-left: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.recipe-details ul li, .recipe-details ol li {
+    margin-bottom: 15px;
+    font-size: 1.2em;  /* Larger text size for readability */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e0f2f1; /* Soft Mint */
+    color: #ff6f61; /* Light Coral */
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dish {
+        max-width: 250px;
+    }
+
+    .recipe-image img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .dish {
+        max-width: 220px;
+    }
+
+    .recipe-image img {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .dish {
+        max-width: 200px;
+    }
+
+    .recipe-image img {
+        max-width: 200px;
+    }
+
+    .recipe-content {
+        padding: 10px;
+    }
+
+    .recipe-details h2 {
+        font-size: 1.5em;  /* Adjusted for smaller screens */
+    }
+
+    .recipe-details ul li, .recipe-details ol li {
+        font-size: 1em;  /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 0.8em;
+    }
+
+    .dish {
+        max-width: 180px;
+    }
+
+    .recipe-image img {
+        max-width: 180px;
+    }
+
+    .recipe-details {
+        font-size: 0.9em;
+    }
+}
